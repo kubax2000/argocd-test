@@ -15,7 +15,7 @@ spec:
     helm:
       valuesObject:
         prometheus:
-          enabled: true
+          enabled: "pod"
         ingress:
           enabled: true
   syncPolicy:
