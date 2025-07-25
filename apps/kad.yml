@@ -16,6 +16,8 @@ spec:
       valuesObject:
         prometheus:
           enabled: true
+        ingress:
+          enabled: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
