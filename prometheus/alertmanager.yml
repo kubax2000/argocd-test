@@ -16,9 +16,9 @@ spec:
     spec:
       volumes:
       - name: data
-        emptyDir: {}
-        #persistentVolumeClaim:
-        #  claimName: alertmanager-data
+        #emptyDir: {}
+        persistentVolumeClaim:
+          claimName: alertmanager-data
       - name: config
         configMap:
           name: alertmanager-config

@@ -31,11 +31,11 @@ spec:
           name: prometheus-rules
       - name: rules-init
         emptyDir: {}
-      - name: data
-        emptyDir: {}
       #- name: data
-      #  persistentVolumeClaim:
-      #    claimName: prometheus-data
+      #  emptyDir: {}
+      - name: data
+        persistentVolumeClaim:
+          claimName: prometheus-data
       initContainers:
       - name: copy-rules
         image: docker.io/tomkukral/kubernetes-mixin
