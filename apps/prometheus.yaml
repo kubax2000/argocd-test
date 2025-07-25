@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: prometheus
   namespace: argo
   labels:
-    app: argocd
+    app: prometheus
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
     path: prometheus
   destination:
     name: in-cluster
-    namespace: argo
+    namespace: prometheus
   syncPolicy:
     syncOptions:
     - Validate=true
